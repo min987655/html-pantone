@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /*모든 애들 초기화*/
+            /*DIV를 둘러싸는 마진과 패딩을 0으로 맞춤*/
+            padding: 0px;
+            margin: 0px;
+            /*마진, 패딩, 보더까지 영역 합쳐진 사이즈 : 계산 편리 */
+            box-sizing: border-box;
+        }
+
+        .my__menu {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            grid-gap: 30px;
+            background-color: cornflowerblue;
+        }
+
+        .my__menu li {
+            display: grid;
+            align-items: center;
+            list-style-type: none;
+            height: 30px;
+            padding: 0 10px 0 10px;
+        }
+
+        .my__menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header {
+            background-color: orange;
+            height: 100px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my__header {
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+
+        /* css 함수 반응형에 사용 */
+        @media (max-width: 500px) {
+            .my__menu {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /* : css 에서 이벤트 */
+        .my__menu li:hover {
+            background-color: rgb(224, 146, 0);
+        }
+
+        .my__menu li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            margin-top: 9px;
+            display: none;
+            color: white;
+            background-color: rgb(224, 146, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="my__header">COS</span>
+    </header>
+    <nav>
+        <ul class="my__menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li>
+                <a href="#">REACT</a>
+                <ul class="dropdown">
+                    <li>Link1</li>
+                    <li>Link2</li>
+                    <li>Link3</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

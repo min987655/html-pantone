@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@350&display=swap" rel="stylesheet">
+    <title>PANTONE</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            background-color: rgb(245, 245, 245);
+            font-family: 'Heebo', sans-serif;
+        }
+
+        header {
+            grid-column: 1/12;
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            align-items: center;
+            padding: 0.5em 7em 0em 7em;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .header__logo {
+            width: 9em;
+        }
+
+        .nav__bar {
+            display: grid;
+            grid-template-columns: 8.7fr 1.3fr;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav__menu {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            padding: 1em 0em 1em 0em;
+        }
+
+        .nav__menu a {
+            padding: 0em 1em 0em 1em;  
+        }
+        .nav__util {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            grid-gap: 1.5em;
+        }
+
+        .hr {
+            grid-column: 1/12;
+            grid-row: 2/2;
+        }
+
+        .grid__section {
+            grid-column: 3/10;
+            padding: 1em;
+        }
+
+        .section__20color img {
+            display: grid;
+            padding: 3em 0 0 3em;
+            width: 95%;
+        }
+
+        .section__identity img {
+            display: grid;
+            padding: 7em 0 7em 0em;
+            width: 100%;
+        }
+
+        footer {
+            grid-column: 1/12;
+            display: grid;
+            grid-template-columns: 3fr 2fr 4fr 3fr;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 13em 1em 13em;
+            background-color: rgb(86, 86, 92);
+            color: rgb(165, 165, 165);
+        }
+
+        .footer__logo {
+            grid-column: 1/2;
+        }
+
+        .footer__logo img {
+            margin-right: 10em;
+            margin-left: 1.5em;
+        }
+
+        .privacy {
+            grid-column: 2/3;  
+            padding-left: 3em; 
+        }
+
+        .copy {
+            grid-column: 3/4;
+            padding-right: 2em;
+        }
+
+        .footer__sns {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: right;
+        }
+
+        .footer__sns a {
+            padding-right: 0.6em;
+        }
+
+        .logo {
+            width: 9em;
+        }
+
+        /* .dropdown {
+            position: relative;
+            display: block;
+            padding: 1em 1.5em 1em 1.5em;
+        } */
+
+        @media(max-width: 800px) {
+/* 
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger img {
+                width: 3em;
+            }
+
+            .nav__menu,
+            .nav__util {
+                display: none;
+            }
+
+            .hamburger img:visited .nav__menu{
+                display: block;
+                text-align: center;
+                align-items: center;
+                padding: 0.6em 0 0.5em 0;
+                margin: 0em auto;
+            } */
+
+            .container,
+            header,
+            .nav__bar,
+            .nav__menu,
+            .nav__util,
+            footer,
+            .footer__logo img,
+            .privacy,
+            .copy,
+            .footer__sns {
+                display: block;
+                text-align: center;
+                align-items: center;
+                padding: 0.6em 0 0.5em 0;
+                margin: 0em auto;
+            }
+
+            .footer__logo img {
+                opacity: 90%;
+            }
+
+            .dropdown__content {
+                width: 100%;
+            }
+
+            .grid__section {
+                display: block;
+                text-align: center;
+                padding: 0px;
+            }
+
+            .section__20color,
+            .section__identity {
+                padding: 0px;
+            }
+        }
+
+        /* .dropdown__content {
+            display: none;
+            position: absolute;
+            background-color: rgb(224, 216, 208);
+            margin-top: 1.2em;
+            font-size: 0.9rem;
+            padding: 1em 1em 1em 1em;
+        }
+
+        .dropdown:hover .dropdown__content {
+            display: block;
+        } */
+
+        a:visited {color: black;}
+        a:hover {color:rgb(59, 96, 165);}
+
+        footer a:visited {color: rgb(165, 165, 165);}
+        footer a:hover {opacity: 70%;}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img class="header__logo" src="/image/logo.png" alt="Logo" />
+            <nav>
+                <div class="nav__bar">
+                    <div class="hamburger"s><img src="/image/hamburger.png"></a></div>
+                    <ul class="nav__menu">
+                        <li class="dropdown"><a href="#">About</a></li>
+                        <li class="dropdown"><a href="#">Color Trend</a></li>
+                        <li class="dropdown"><a href="#">Palette</a></li>      
+                        <li class="dropdown"><a href="#">FAQ</a></li>
+                    </ul>
+                    <ul class="nav__util">
+                        <li><a href="#">Signin</a></li>
+                        <li><a href="#">Login</a></li>
+                        <!--<li><a href="#">My Page</a></li>
+                        <li><a href="#">Logout</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <img class="hr" src="/image/hr.png" alt="hr">
+        <section class="grid__section">
+            <article class="section__20color"><img src="/image/main_1.png" alt="메인_올해의컬러"></article>
+            <article class="section__identity"><img src="/image/main_2.png" alt="메인_팬톤"></article>
+        </section>
+        <footer>
+            <div class="footer__logo">
+                <img class="logo" src="/image/logo_w.png" alt="Logo" />
+            </div>
+            <div class="privacy"><a href="#">개인정보처리방침</a></div>
+            <p class="copy">ⓒ 2020 Web Project ｜ All rights reserved.</p>
+            <div class="footer__sns">
+                <a><img src="/image/twitter.png" alt="twitter" /></a>
+                <a><img src="/image/instagram.png" alt="instagram" /></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
